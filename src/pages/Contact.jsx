@@ -34,12 +34,12 @@ const Contact = () => {
         axios.post(`${BASE_URL}/contact`, { name, email, message })
             .then(result => {
                 console.log(result)
-                // navigate('/')
                 setShowSuccess(true)
+                // navigate('/')
                 setTimeout(() => {
-                    setShowSuccess(false)
+                    //     setShowSuccess(false)
                     navigate('/')
-                }, 2500);
+                }, 1000);
             })
             .catch(err => console.log(err));
     }
@@ -52,7 +52,6 @@ const Contact = () => {
             {showSuccess ? (
                 <div className="success-message">
                     <img src={submit_success_img} alt="Submit Successfully" />
-                    <h2>Submit Successfully</h2>
                 </div>
             ) : (
                 <form onSubmit={handleSubmit} className='contact-form'>
