@@ -1,0 +1,29 @@
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
+
+[[edge_functions]]
+  path = "/about"
+  function = "About"
+
+[[edge_functions]]
+  path = "/blog"
+  function = "Blog"
+
+[[edge_functions]]
+  path = "/contact"
+  function = "Contact"
+
+[[edge_functions]]
+  path = "/login"
+  function = "Login"
+
+[[edge_functions]]
+  path = "/signup"
+  function = "Signup"
+
+[[edge_functions]]
+  path = "/blogPage"
+  function = "BlogPage"
+

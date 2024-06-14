@@ -1,0 +1,132 @@
+h1 {
+    text-align: center;
+    font-size: 35px;
+    padding: 40px 0px 0px 0px;
+}
+
+.about {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 100px;
+    padding: 150px 50px;
+}
+
+.about-left {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.about-left span {
+    color: red;
+}
+
+.about-left-info {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.about-right img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.about-right img:hover {
+    transform: scale(1.1);
+}
+
+.contact {
+    padding: 50px 0px;
+    text-decoration: underline;
+    text-decoration-color: black;
+    text-decoration-thickness: 2px;
+    font-family: cursive;
+}
+
+.contact-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px -250px 0px;
+}
+
+.contact-btn {
+    color: white;
+    background-color: var(--navBackground-color);
+    font-size: 25px;
+    padding: 15px 30px;
+    border: 1px solid white;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.contact-btn:hover {
+    border-radius: 10px;
+    color: rgb(255, 100, 100);
+}
+
+.btn-Link {
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .about-left-info {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .about {
+        flex-wrap: wrap;
+        padding: 50px 50px;
+    }
+
+    h1 {
+        font-size: 30px;
+        padding: 20px 0px 0px 0px;
+    }
+
+    .about-left {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-left-info {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 550px) {
+    .about {
+        padding: 50px 40px;
+        gap: 20px;
+    }
+
+    .about-left {
+        font-size: 22px;
+    }
+
+    .about-left-info {
+        font-size: 15px;
+    }
+
+    .contact {
+        font-size: 20px;
+        padding: 2px 0px 30px 0px;
+        text-decoration-thickness: 1px;
+    }
+
+    .contact-btn {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
+    .contact-btn:hover {
+        border-radius: 10px;
+    }
+}

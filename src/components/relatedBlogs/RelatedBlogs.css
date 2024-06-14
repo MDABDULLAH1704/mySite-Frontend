@@ -1,0 +1,26 @@
+.relatedBlogs-title {
+    text-decoration: underline;
+    margin-bottom: 80px;
+}
+
+.relatedBlogs {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    column-gap: 10px;
+    margin-bottom: -200px;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .relatedBlogs-title {
+        font-size: 22px;
+        margin-bottom: 40px;
+        margin-top: -20px;
+    }
+
+    .relatedBlogs {
+        margin-bottom: -250px;
+    }
+}

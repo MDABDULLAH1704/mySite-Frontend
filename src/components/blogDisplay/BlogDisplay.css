@@ -1,0 +1,51 @@
+.blogDisplay {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 30px;
+    column-gap: 20px;
+}
+
+.blogDisplay-left img {
+    width: 400px;
+    border-radius: 15px;
+}
+
+.blogDisplay-right p {
+    width: 800px;
+    font-size: 19px;
+}
+
+/* Responsive Design */
+@media (max-width: 1224px) {
+    .blogDisplay-right p {
+        width: 580px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .blogDisplay-right p {
+        width: 400px;
+    }
+}
+
+@media (max-width: 500px) {
+    .blogDisplay-title {
+        font-size: 22px;
+    }
+
+    .blogDisplay {
+        margin-top: 30px;
+    }
+
+    .blogDisplay-left img {
+        width: 350px;
+    }
+
+    .blogDisplay-right p {
+        width: 350px;
+        font-size: 13px;
+    }
+}
