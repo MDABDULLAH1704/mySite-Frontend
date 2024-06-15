@@ -29,17 +29,30 @@ const Login = () => {
 
 
     // handleSubmit function 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        axios.post(`${BASE_URL}/login`, { email, password })
-            .then(result => {
-                console.log(result)
-                if (result.data == "Success") {
-                    navigate('/')
-                }
-            })
-            .catch(err => console.log(err))
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const result = await axios.post(`${BASE_URL}/login`, { email, password });
+            console.log(result);
+            if (result.data == "Success") {
+                navigate('/')
+            }
+        } catch (error) {
+            console.log("Error : ", err);
+        }
     }
+
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault()
+    //     await axios.post(`${BASE_URL}/login`, { email, password })
+    //         .then(result => {
+    //             console.log(result)
+    //             if (result.data == "Success") {
+    //                 navigate('/')
+    //             }
+    //         })
+    //         .catch(err => console.log(err))
+    // }
 
 
     return (

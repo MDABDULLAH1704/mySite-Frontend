@@ -29,20 +29,34 @@ const Contact = () => {
     const [showSuccess, setShowSuccess] = useState(false);
     const navigate = useNavigate()
 
-    const handleSubmit = (e) => {
+    // handleSubmit function 
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        axios.post(`${BASE_URL}/contact`, { name, email, message })
-            .then(result => {
-                console.log(result)
-                setShowSuccess(true)
-                // navigate('/')
-                setTimeout(() => {
-                    //     setShowSuccess(false)
-                    navigate('/')
-                }, 1000);
-            })
-            .catch(err => console.log(err));
+        try {
+            const result = await axios.post(`${BASE_URL}/contact`, { name, email, message });
+            console.log(result);
+            setShowSuccess(true);
+            setTimeout(() => {
+                navigate('/')
+            }, 1500);
+        } catch (err) {
+            console.log("Error : ", err);
+        }
     }
+
+    // const handleSubmit = async (e) => {
+    //     e.preventDefault();
+    //     await axios.post(`${BASE_URL}/contact`, { name, email, message })
+    //         .then(result => {
+    //             console.log(result)
+    //             setShowSuccess(true)
+    //             setTimeout(() => {
+    //                 //     setShowSuccess(false)   //
+    //                 navigate('/')
+    //             }, 1500);
+    //         })
+    //         .catch(err => console.log(err));
+    // }
 
 
     return (
